@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+* {
+    margin:0;
+    padding:0;
+}
+
+body, html, .filter {
+    height: 100%;
+}
+
+body {
+    font-size: 12px;
+    font-family: 'times new roman', 'serif';
+}
+
+.topo {
+    background-color: #000;
+    color: #FFF;
+    text-align: center;
+}
+.topo .capa {
+    border-left: 170px solid transparent;
+    border-right: 170px solid transparent;
+    width: 360px;
+}
+.topo .pontaCapaCima {
+    border-top: 30px solid #FFF;
+}
+.topo .pontaCapaBaixo {
+    border-bottom: 30px solid #000;
+}
