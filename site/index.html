@@ -14,34 +14,85 @@
         -->
     </head>
     <body>
-        <header class="topo">
-            <div class="capa pontaCapaBaixo"><img src="imagens/livro1.jpg"></div>
-            <h1 class="titulo">As Cronicas de<br /> ARTUR</h1>
-            <div class="capa pontaCapaBaixo pontaCapaCima"><img src="imagens/livro2_maior.jpg"></div>
-            <nav class="navegacao">
+        <header id="topo" class="topo">
+            <div class="containerCapa"><div class="capa1"></div></div>
+            <div class="groupTitulo"><h1 class="titulo">As Cronicas de<br><span>ARTUR</span></h1></div>
+            <div class="groupContainer">
+                <div class="containerCapa">
+                    <div class="capa2 pontaCapaCima"></div>
+                </div>
+                <div class="containerCapa">
+                    <div class="capa2 pontaCapaBaixo"></div>
+                </div>
+            </div>
+            <nav class="navegacao menuHome">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active hide">
-                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <li class="nav-item active" style="display: none;">
+                            <a class="nav-link" href="#topo">Home <span class="sr-only">(current)</span></a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Trilogia</a>
+                        <li class="nav-item col-4">
+                            <a class="nav-link" href="#trilogia">Trilogia</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Comprar</a>
+                        <li class="nav-item col-4">
+                            <a class="nav-link" href="#comprar">Comprar</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">O Autor</a>
+                        <li class="nav-item col-4">
+                            <a class="nav-link" href="#autor">O Autor</a>
                         </li>
                     </ul>
                 </div>
             </nav>
-            <div class="capa pontaCapaCima"><img src="imagens/livro3.jpg"></div>
+            <div class="containerCapa"><div class="capa3"></div></div>
         </header>
-
+        <section id="Trilogia" class="">
+            <h2>Conheça a Obra</h2>
+            <p>
+                As Crônicas Aerturianas de Bernard Cornwell trazem uma visão mais "pé no chão" do mito acerca do lendário general britânico, sendo a junção entre uma pesquisa histórica profunda e a genialidade de seu autor. E é na narrativa em que obra brilha, Cornwell consegue traçar uma linha de equilíbrio que a mantêm detalhada e empolgante.
+            </p>
+            <p>
+                A história é contada através da perspectiva de Derfel (lê-se Dervel), um órfão saxão que foi adotado por Merlin e veio a se tornar um dos capitães de Artur e conselheiro. Mesmo não sendo vivida pelos olhos do Rei Artur, a trilogia pode muito bem ser considera a melhor representação da lenda até hoje.
+            </p>
+        </section>
+        <section id="autor">
+            <h2>Quem é Benard Cornwell?</h2>
+            <p><img src="imagens/autor.jpg"></p>
+            <p>
+                Bernard Cornwell é um autor inglês, nascido em 23 de fevereiro de 1994 em Londres. Conhecido principalmente por suas obras no genero da ficção histórica, em especifico momentos chave da história inglesa, como as guerras napôleonicas em Sharpe e as invasões dinamarquesas em As Crônicas Saxônicas. Suas obras são marcadas pelo detalhamento do cotidiano de suas respectivas épocas, personagens criveis e combates viscerais.
+            </p>
+        </section>
+        <section id="comprar">
+            <h2>PRÉ COMPRA</h2>
+            <form class="form" name="comprar">
+                <div class="form-group">
+                    <input type="text" name="Nome completo" class="form-control" value="" placeholder="Nome completo:"/>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" class="form-control" value="" placeholder="E-mail:"/>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="tel" class="form-control" value="" placeholder="Telefone:"/>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="end" class="form-control" value="" placeholder="Endereço:"/>
+                </div>
+                <div class="form-group">
+                    <select name="forma" class="form-control">
+                        <option>Selecione uma forma de pagamento: </option>
+                        <option value="cartão de crédito">Cartão de crédito</option>
+                        <option value="cartão de crédito">Cartão de débito</option>
+                        <option value="cartão de crédito">Boleto</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary" name="comprar" value="COMPRAR">
+                </div>
+            </form>
+        </section>
+        
         <script src="js/jquery-3.3.1.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         

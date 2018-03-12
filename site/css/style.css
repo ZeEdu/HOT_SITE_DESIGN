@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,600,700');
+
 * {
     margin:0;
     padding:0;
@@ -14,19 +16,96 @@ body {
     font-family: 'times new roman', 'serif';
 }
 
+h1, h2, h3, h4 {
+    font-family: 'Cormorant Garamond', serif;
+}
+.menuHome .collapse, .menuHome .navbar-nav {
+    display: block;
+}
+.menuHome .navbar-toggler {
+    display: none;
+}
+.menuHome.navegacao {
+    display: flex;
+    align-items: center;
+}
+.menuHome .navbar-nav .nav-item {
+    display: inline-block;
+}
+.menuHome a {
+    color: #FFF;
+}
+
+.titulo {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 28px;
+}
+.titulo span {
+    font-size: 40px;
+}
+
 .topo {
+    width: 100%;
     background-color: #000;
     color: #FFF;
     text-align: center;
 }
-.topo .capa {
-    border-left: 170px solid transparent;
-    border-right: 170px solid transparent;
+.containerCapa {
     width: 360px;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
 }
-.topo .pontaCapaCima {
-    border-top: 30px solid #FFF;
+
+.topo .capa1 {
+    background: url(../imagens/livro1.jpg) bottom no-repeat;
+    border-top: 130px solid transparent;
 }
-.topo .pontaCapaBaixo {
-    border-bottom: 30px solid #000;
+.topo .capa3 {
+    background: url(../imagens/livro3.jpg) top no-repeat;
+    border-bottom: 130px solid transparent;
+}
+.topo .capa1, .topo .capa3 {
+    height: 130px;
+    border-left: 420px solid #000;
+    border-right: 420px solid #000;
+}
+.topo .groupContainer .containerCapa .capa2 {
+    background: url(../imagens/livro2_maior.jpg) no-repeat;
+    height: 85px;
+    border-left: 420px solid #000;
+    border-right: 420px solid #000;
+}
+.topo .groupContainer .containerCapa .capa2.pontaCapaBaixo {
+    background-position: bottom;
+    border-top: 85px solid transparent;
+}
+.topo .groupContainer .containerCapa .capa2.pontaCapaCima {
+    background-position: top;
+    border-bottom: 85px solid transparent;
+}
+
+.topo .navegacao {
+    height: 95px;
+    width: 100%;
+}
+
+.topo .groupTitulo {
+    height: 105px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body > section {
+    padding: 30px 5px;
+}
+section h2 {
+    text-align: center;
+}
+section p {
+    text-align: justify;
 }
