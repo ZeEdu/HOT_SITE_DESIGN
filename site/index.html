@@ -30,17 +30,17 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
+                    <ul class="navbar-nav mr-auto row">
                         <li class="nav-item active" style="display: none;">
                             <a class="nav-link" href="#topo">Home <span class="sr-only">(current)</span></a>
                         </li>
-                        <li class="nav-item col-4">
+                        <li class="nav-item col-3">
                             <a class="nav-link" href="#trilogia">Trilogia</a>
                         </li>
-                        <li class="nav-item col-4">
+                        <li class="nav-item col-3">
                             <a class="nav-link" href="#comprar">Comprar</a>
                         </li>
-                        <li class="nav-item col-4">
+                        <li class="nav-item col-3">
                             <a class="nav-link" href="#autor">O Autor</a>
                         </li>
                     </ul>
@@ -48,7 +48,7 @@
             </nav>
             <div class="containerCapa"><div class="capa3"></div></div>
         </header>
-        <section id="Trilogia" class="">
+        <section id="trilogia" class="">
             <h2>Conheça a Obra</h2>
             <p>
                 As Crônicas Aerturianas de Bernard Cornwell trazem uma visão mais "pé no chão" do mito acerca do lendário general britânico, sendo a junção entre uma pesquisa histórica profunda e a genialidade de seu autor. E é na narrativa em que obra brilha, Cornwell consegue traçar uma linha de equilíbrio que a mantêm detalhada e empolgante.
@@ -98,8 +98,29 @@
         
         <script>
             $(document).ready(function() {
-//                navbar navbar-expand-lg navbar-light bg-light
-                
+                var lastScroll = 0;
+                $(document).scroll(function() {
+                    let posScroll = $(this).scrollTop();
+                    if(posScroll > 640) {
+                        $(".navegacao").addClass("navbar navbar-expand-lg navbar-light bg-light").removeClass("menuHome");
+                        if(posScroll < lastScroll) {
+                            $(".navegacao").addClass("fixedTop");
+                        } else {
+                            $(".navegacao").removeClass("fixedTop");                            
+                        }
+                    } else {
+                        $(".navegacao").removeClass("navbar navbar-expand-lg navbar-light bg-light").addClass("menuHome").removeClass("fixedTop");                            
+                    }
+                    lastScroll = posScroll;
+                });
+                $(".nav-link").click(function(e) {
+                    e.preventDefault();
+                    var target = $(this).attr("href");
+                    $("html, body").animate(
+                        { scrollTop: $(target).offset().top },
+                        500
+                    );
+                });
             });
         </script>
     </body>

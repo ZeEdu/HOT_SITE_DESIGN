@@ -90,6 +90,11 @@ h1, h2, h3, h4 {
 .topo .navegacao {
     height: 95px;
     width: 100%;
+    font-size: 18px;
+    font-weight: 600;
+}
+.topo .navegacao a:hover {
+    color: #CCC
 }
 
 .topo .groupTitulo {
@@ -98,6 +103,12 @@ h1, h2, h3, h4 {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.fixedTop {
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 body > section {
