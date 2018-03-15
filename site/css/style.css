@@ -1,6 +1,8 @@
 @charset "utf-8";
 
 @import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif|Tangerine');
+
 
 * {
     margin:0;
@@ -13,10 +15,10 @@ body, html, .filter {
 
 body {
     font-size: 12px;
-    font-family: 'times new roman', 'serif';
+    font-family: 'Noto Serif', 'times new roman', 'serif';
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, button, .menuHome a {
     font-family: 'Cormorant Garamond', serif;
 }
 .menuHome .collapse, .menuHome .navbar-nav {
@@ -32,17 +34,22 @@ h1, h2, h3, h4 {
 .menuHome .navbar-nav .nav-item {
     display: inline-block;
 }
+.navegacao .navbar-nav .nav-item {
+    width: inherit;
+}
 .menuHome a {
     color: #FFF;
+    font-size: 1.3em;
 }
 
 .titulo {
-    text-transform: uppercase;
+    font-family: 'Tangerine', cursive;
+    /*text-transform: uppercase;*/
     font-weight: 600;
-    font-size: 28px;
+    font-size: 3.7em;
 }
 .titulo span {
-    font-size: 40px;
+    font-size: 1.3em;
 }
 
 .topo {
@@ -87,8 +94,10 @@ h1, h2, h3, h4 {
     border-bottom: 85px solid transparent;
 }
 
-.topo .navegacao {
+.topo .navegacao.menuHome {
     height: 95px;
+}
+.topo .navegacao {
     width: 100%;
     font-size: 18px;
     font-weight: 600;
@@ -111,8 +120,15 @@ h1, h2, h3, h4 {
     left: 0;
 }
 
-body > section {
+body > .container > section {
     padding: 30px 5px;
+    height: 100vh;
+    background-color: #FEFEFE;
+    border-top: 1px solid #CCC;
+}
+
+.topo {
+    height: 100vh;
 }
 section h2 {
     text-align: center;
