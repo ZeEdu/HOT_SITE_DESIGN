@@ -51,7 +51,7 @@
         <div class="container">
             <section id="autor">
                 <h2>Quem é Benard Cornwell?</h2>
-                <p><img src="imagens/autor.jpg"></p>
+                <p><img class="w-100" src="imagens/autor.jpg"></p>
                 <p>
                     Bernard Cornwell é um autor inglês, nascido em 23 de fevereiro de 1994 em Londres. Conhecido principalmente por suas obras no genero da ficção histórica, em especifico momentos chave da história inglesa, como as guerras napôleonicas em Sharpe e as invasões dinamarquesas em As Crônicas Saxônicas. Suas obras são marcadas pelo detalhamento do cotidiano de suas respectivas épocas, personagens criveis e combates viscerais.
                 </p>
@@ -70,30 +70,46 @@
                 </div>
             </section>
             <section id="comprar">
-                <h2>GARANTA JÁ O SEU</h2>
+                <h2 class="mb-0">COMPRAR</h2>
+                <p class="text-center mb-4">Garanta já o seu</p>
                 <form class="form" name="comprar">
-                    <div class="form-group">
-                        <input type="text" name="Nome completo" class="form-control" value="" placeholder="Nome completo:"/>
+                    <div class="form-group row">
+                        <label class="col-12">
+                            <!--Nome completo:-->
+                            <input type="text" name="Nome completo" class="form-control" value="" placeholder="Nome completo:" required/>
+                        </label>
                     </div>
-                    <div class="form-group">
-                        <input type="email" name="email" class="form-control" value="" placeholder="E-mail:"/>
+                    <div class="form-group row">
+                        <label class="col-12">
+                            <!--E-mail:-->
+                            <input type="email" name="email" class="form-control" value="" placeholder="E-mail:" required/>
+                        </label>
                     </div>
-                    <div class="form-group">
-                        <input type="text" name="tel" class="form-control" value="" placeholder="Telefone:"/>
+                    <div class="form-group row">
+                        <label class="col-12">
+                            <!--Telefone:-->
+                            <input type="number" name="tel" class="form-control" value="" placeholder="Telefone:" required/>
+                        </label>
                     </div>
-                    <div class="form-group">
-                        <input type="text" name="end" class="form-control" value="" placeholder="Endereço:"/>
+                    <div class="form-group row">
+                        <label class="col-12">
+                            <!--Endereço:-->
+                            <input type="text" name="end" class="form-control" value="" placeholder="Endereço:" required/>
+                        </label>
                     </div>
-                    <div class="form-group">
-                        <select name="forma" class="form-control">
-                            <option>Selecione uma forma de pagamento: </option>
-                            <option value="cartão de crédito">Cartão de crédito</option>
-                            <option value="cartão de crédito">Cartão de débito</option>
-                            <option value="cartão de crédito">Boleto</option>
-                        </select>
+                    <div class="form-group row">
+                        <label class="col-12">
+                            <!--Forma de pagamento:-->
+                            <select name="forma" class="form-control" required>
+                                <option>Selecione uma forma de pagamento: </option>
+                                <option value="cartão de crédito">Cartão de crédito</option>
+                                <option value="cartão de crédito">Cartão de débito</option>
+                                <option value="cartão de crédito">Boleto</option>
+                            </select>
+                        </label>
                     </div>
-                    <div class="form-group">
-                        <input type="submit" class="btn btn-primary" name="comprar" value="COMPRAR">
+                    <div class="form-group text-center">
+                        <input type="submit" class="btn btn-primary btn-block" name="comprar" value="COMPRAR AGORA">
                     </div>
                 </form>
             </section>
@@ -123,6 +139,7 @@
                     }
                     lastScroll = posScroll;
                 });
+                
                 $(".nav-link").click(function(e) {
                     e.preventDefault();
                     $(".nav-item").removeClass("active");
@@ -132,6 +149,17 @@
                         { scrollTop: $(target).offset().top },
                         500
                     );
+                });
+                
+                $(".form").submit(function(e) {
+                    e.preventDefault();
+                    $(this).addClass("load");
+                    $(this).find("input, select, button").prop("disabled", true);
+                    setTimeout(() => { 
+                        $(this).removeClass("load"); 
+                        $(this).find("input, select, button").prop("disabled", false);
+                        alert("Salvo com sucesso!");
+                    }, 2000);
                 });
             });
         </script>
