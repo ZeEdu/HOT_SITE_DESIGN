@@ -178,7 +178,6 @@ section p {
 .returnTopo {
     position: relative;
     bottom: 109px;
-    right: 5px;
     float: right;
     animation-name: returnTop;
     animation-duration: 0.7s;
