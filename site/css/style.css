@@ -81,11 +81,11 @@ h1, h2, h3, h4, button, .menuHome a {
 }
 
 .topo .capa1 {
-    background: url(../imagens/livro1.jpg) bottom no-repeat;
+    background: url(../imagens/livro1_2.jpg) bottom no-repeat;
     border-top: 130px solid transparent;
 }
 .topo .capa3 {
-    background: url(../imagens/livro3.jpg) top no-repeat;
+    background: url(../imagens/livro3_2.jpg) top no-repeat;
     border-bottom: 130px solid transparent;
 }
 .topo .capa1, .topo .capa3 {
@@ -94,7 +94,7 @@ h1, h2, h3, h4, button, .menuHome a {
     border-right: 420px solid #000;
 }
 .topo .groupContainer .containerCapa .capa2 {
-    background: url(../imagens/livro2_maior.jpg) no-repeat;
+    background: url(../imagens/livro2_maior_2.jpg) no-repeat;
     height: 85px;
     border-left: 420px solid #000;
     border-right: 420px solid #000;
@@ -173,4 +173,26 @@ section p {
 
 .load, .load * {
     cursor: wait;
+}
+
+.returnTopo {
+    position: relative;
+    bottom: 109px;
+    right: 5px;
+    float: right;
+    animation-name: returnTop;
+    animation-duration: 0.7s;
+    animation-timing-function: linear;
+    animation-direction: alternate; 
+    animation-iteration-count: infinite;
+    color: hsla(0, 0%, 0%, 0.45) !important;
+}
+
+@keyframes returnTop {
+    from {
+        transform: translateY(-7px);
+    }
+    to {
+        transform: translateY(7px);
+    }
 }
