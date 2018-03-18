@@ -105,15 +105,11 @@ h1, h2, h3, h4, button, .menuHome a {
 }
 
 body > .container > section {
-    padding: 5em 5px 0 5px;
-    height: 100vh;
+    padding: 5em 5px 5em 5px;
     background-color: #FEFEFE;
     border-top: 1px solid #CCC;
 }
 
-.topo {
-    /*height: 100vh;*/
-}
 section h2 {
     text-align: center;
 }
@@ -137,8 +133,11 @@ section p {
     margin-top: 130px;
 }
 
+#autor p img {
+    text-align: center;
+}
 #autor img {
-    max-width: 600px;
+    max-width: 400px;
 }
 
 .load, .load * {
@@ -147,7 +146,7 @@ section p {
 
 .returnTopo {
     position: relative;
-    bottom: 109px;
+/*    bottom: 109px;*/
     float: right;
     animation-name: returnTop;
     animation-duration: 0.7s;
@@ -163,5 +162,22 @@ section p {
     }
     to {
         transform: translateY(7px);
+    }
+}
+
+@media screen AND (max-width: 360px) {
+    .menuHome a {
+        font-size: .9em;
+    }
+}
+@media screen AND (min-height: 640px) {
+    body > .container > section {
+        height: 100vh;
+        padding-bottom: 0;
+    }
+}
+@media screen AND (min-height: 660px) {
+    #trilogia .backgroundopacit:nth-of-type(2) {
+        margin-top: 204px;
     }
 }
