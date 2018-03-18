@@ -71,41 +71,11 @@ h1, h2, h3, h4, button, .menuHome a {
     text-align: center;
 }
 .containerCapa {
-/*    width: 100%;
-    max-width: 720px;*/
-    width: 360px;
+    width: 100%;
     margin: 0 auto;
     overflow: hidden;
     display: flex;
     justify-content: center;
-}
-
-.topo .capa1 {
-    background: url(../imagens/livro1_2.jpg) bottom no-repeat;
-    border-top: 130px solid transparent;
-}
-.topo .capa3 {
-    background: url(../imagens/livro3_2.jpg) top no-repeat;
-    border-bottom: 130px solid transparent;
-}
-.topo .capa1, .topo .capa3 {
-    height: 130px;
-    border-left: 420px solid #000;
-    border-right: 420px solid #000;
-}
-.topo .groupContainer .containerCapa .capa2 {
-    background: url(../imagens/livro2_maior_2.jpg) no-repeat;
-    height: 85px;
-    border-left: 420px solid #000;
-    border-right: 420px solid #000;
-}
-.topo .groupContainer .containerCapa .capa2.pontaCapaBaixo {
-    background-position: bottom;
-    border-top: 85px solid transparent;
-}
-.topo .groupContainer .containerCapa .capa2.pontaCapaCima {
-    background-position: top;
-    border-bottom: 85px solid transparent;
 }
 
 .topo .navegacao.menuHome {
