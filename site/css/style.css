@@ -51,6 +51,7 @@ h1, h2, h3, h4, button, .menuHome a {
     font-size: 1.02em;
     text-shadow: 0 0px 5px #fff;
     text-transform: uppercase;
+    font-weight: 700;
 }
 
 .titulo {
@@ -78,9 +79,6 @@ h1, h2, h3, h4, button, .menuHome a {
     justify-content: center;
 }
 
-.topo .navegacao.menuHome {
-    height: 95px;
-}
 .topo .navegacao {
     width: 100%;
     font-size: 18px;
@@ -91,7 +89,6 @@ h1, h2, h3, h4, button, .menuHome a {
 }
 
 .topo .groupTitulo {
-    height: 105px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -171,6 +168,19 @@ section p {
     }
 }
 @media screen AND (min-height: 640px) {
+    .topo .containerCapa .capa {
+        height: 20.3125vh;
+    }
+    .topo .containerCapa:nth-of-type(2) .capa {
+        height: 26.5625vh;
+    }
+    .topo .navegacao.menuHome {
+        height: 14.84375vh;
+    }
+    .topo .groupTitulo {
+        height: 17.96875vh;
+    }
+
     body > .container > section {
         height: 100vh;
         padding-bottom: 0;
