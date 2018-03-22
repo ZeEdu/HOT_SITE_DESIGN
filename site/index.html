@@ -20,14 +20,14 @@
             <figure class="containerCapa">
                 <picture>
                     <source srcset="imagens/livro1_2.jpg">
-                    <img class="capa" src="imagens/livro1_2.jpg">
+                    <img class="capa" alt="Imagem de capa do primeiro livro da trilogia" src="imagens/livro1_2.jpg">
                 </picture>
             </figure>
             <div class="groupTitulo"><h1 class="titulo">As Crônicas de<span> Artur</span></h1></div>
             <figure class="containerCapa">
                 <picture>
                     <source srcset="imagens/livro2_maior_2.jpg">
-                    <img class="capa" src="imagens/livro2_maior_2.jpg">
+                    <img class="capa" alt="Imagem de capa do segundo livro da trilogia" src="imagens/livro2_maior_2.jpg">
                 </picture>
             </figure>
             <nav class="navegacao menuHome">
@@ -54,14 +54,14 @@
             <figure class="containerCapa">
                 <picture>
                     <source  srcset="imagens/livro3_2.jpg">
-                    <img class="capa" src="imagens/livro3_2.jpg">
+                    <img class="capa" alt="Imagem de capa do terceiro livro da trilogia" src="imagens/livro3_2.jpg">
                 </picture>
             </figure>
         </header>
         <div class="container">
             <section id="autor">
                 <h2>Quem é Benard Cornwell?</h2>
-                <p class="text-center"><img class="w-100" src="imagens/autor.jpg"></p>
+                <p class="text-center"><img class="w-100" alt="Imagem do autor dos livros" src="imagens/autor.jpg"></p>
                 <p>
                     Bernard Cornwell é um autor inglês, nascido em 23 de fevereiro de 1994 em Londres. Conhecido principalmente por suas obras no genero da ficção histórica, em especifico momentos chave da história inglesa, como as guerras napôleonicas em Sharpe e as invasões dinamarquesas em As Crônicas Saxônicas. Suas obras são marcadas pelo detalhamento do cotidiano de suas respectivas épocas, personagens criveis e combates viscerais.
                 </p>
@@ -152,16 +152,20 @@
                 });
                 
                 $(".nav-link").click(function(e) {
+                    $(this).closest(".navegacao").find(".navbar-toggler").trigger("click");
                     e.preventDefault();
                     $(".nav-item").removeClass("active");
                     $(this).closest(".nav-item").addClass("active");
                     var target = $(this).attr("href");
-//                    var navTop = parseInt($(this).closest(".navegacao").height());
+                    var navTop = parseInt($(this).closest(".navegacao").height());
                     $("html, body").animate(
                         { scrollTop: $(target).offset().top },
                         500
                     );
-                    $(this).closest(".navegacao").find(".navbar-toggler").trigger("click");
+                    $("html, body").animate(
+                        { scrollTop: $(target).offset().top + 1 },
+                        0
+                    );
                 });
                 
                 $(".form").submit(function(e) {
