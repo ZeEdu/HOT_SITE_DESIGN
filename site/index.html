@@ -156,10 +156,12 @@
                     $(".nav-item").removeClass("active");
                     $(this).closest(".nav-item").addClass("active");
                     var target = $(this).attr("href");
+//                    var navTop = parseInt($(this).closest(".navegacao").height());
                     $("html, body").animate(
                         { scrollTop: $(target).offset().top },
                         500
                     );
+                    $(this).closest(".navegacao").find(".navbar-toggler").trigger("click");
                 });
                 
                 $(".form").submit(function(e) {

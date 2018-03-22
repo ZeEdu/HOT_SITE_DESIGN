@@ -83,6 +83,7 @@ h1, h2, h3, h4, button, .menuHome a {
     width: 100%;
     font-size: 18px;
     font-weight: 600;
+    z-index: 99;
 }
 .topo .navegacao a:hover {
     color: #CCC
