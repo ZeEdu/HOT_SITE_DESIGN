@@ -1,0 +1,53 @@
+< O que são Métodos de Avaliação Analíticos >
+  Métodos de avaliação analíticos é o nome dado a ação no qual avaliadores examinam uma interface de usuário relacionando-a com conceitos de usabilidade.
+  É comum que os avaliadores sejam especialistas em usabilidade. No entanto, isto não impede que desenvolvedores especializados em interfaces, ou até mesmo usuários finais com conhecimento mais avançado possam exercer a atividade. ( Mack & Nielsen, 1994)
+  Este método costumam ser utilizado com o objetivo de encontrar problemas na usabilidade de um projeto e classifica-los. Após esta analise a equipe técnica irá corrigir o maior número de erros possíveis na interface, com a ordem de prioridade sendo de acordo com a gravidade do erro e o custo de recursos para a correção.
+  É necessário destacar que a existência de três tipos de conhecimento em torno de uma avaliação analítica:
+    Conhecimento de Domínio: para determinar as demandas e necessidades do usuário. Além de quais tarefas são mais realizadas e importantes.
+    Conhecimento e experiência de projeto de interfaces de usuário: para que o avaliador possa analisar os aspectos mais importantes de um projeto. Como os princípios e diretrizes na literatura tendem ao genérico, a experiência se fará vital na hora de decidir quais devem ser seguidos.
+    A partir destes conhecimentos, é possível determinar quais serão os perfis mais indicados para os avaliadores:
+    - Ideal: Possui experiência tanto nos conceitos de usabilidade quanto nos aspectos relevantes do domínio;
+    - Desejável: especializado em interação humano-computador (IHC), dominada os processos avaliativos e os princípios e diretrizes relevantes;
+    - Menos desejável: especialista no domínio. Conhecedor do domínio e estuda os princípios de interface e o processo de avaliação para sua realização;
+    - Menos desejável ainda: um dos desenvolvedores do projeto. Pois  o mesmo não irá conseguir se colocar como um usuário.
+
+< O que é Avaliação Heurística >
+  Segundo NIELSEN (apud, PRATES E BARBOSA, 2014), é uma metodologia analítica que busca identificar problemas de usabilidade de acordo com um conjunto de diretrizes. Valendo-se das práticas definidas por profissionais experientes em IHC.
+  Este método é realizado apenas por especialistas, descartando o envolvimento do usuário.
+  É um método rápido e de baixo custo e recomenda-se o uso de 3 a 5 especialistas (o envolvimento de usuários é descartado).
+    Os seguintes procedimentos devem ser seguidos:
+    1. Sessões curtas, de uma a duas horas e individuais, onde o avaliador irá navegar diversas vezes pela interface julgando a mesma de acordo com um conjunto de princípios de usabilidade.
+    2. Consolidação da avaliação dos especialistas. Em grupo os avaliadores realizam novo julgamento de cada problema encontrado. Ao final é elaborado um relatório unificado apresentando os problemas.
+    3. Seleção dos problemas que devem ser corrigidos. Esta etapa deve ser realizada com o cliente ou gerente do projeto, onde é realizada uma analise do custo/benefício das correções.
+    Nielsen propôs um conjunto básico de heurísticas que servem de guia na analise de uma interface.
+    - visibilidade do estado do sistema: O usuário é informado de tudo que está acontecendo no sistema, da melhor maneira e no momento mais adequado.
+    - correspondência com o mundo real: o vocábulo, os processos e conceitos são familiares aos usuários?
+    - controle e liberdade do usuário: faz presente alternativas e saídas de emergência.
+    -  consistência e padronização: tudo deve ser exatamente aquilo que aparenta; e caso convenção seja estabelecida (como um esquema de cores) ao projeto, a mesma deve ser mantida.
+    - prevenção de erro: informe o usuário das consequências de suas ações, se possível, até mesmo impedindo estas ações que levariam a tal situação.
+    - ajuda aos usuários para reconhecerem, diagnosticarem e se recuperarem de erros: mensagens simples, que indiquem o problema e sugiram uma solução.
+    - reconhecimento em vez de memória: torne objetos, ações e opções visíveis e compreensíveis.
+    - flexibilidade e eficiência de uso: permita ao usuário caminhos alternativos e mais rápidos para uma mesma tarefa.
+    - design estético e minimalista: evite aos máximo informações irrelevantes. Pois elas iram competir pela atenção do usuário com a as que realmente importam.
+    - ajuda e documentação: devem ser de fácil acesso, focadas no domínio e na tarefa do usuário, e apresentar passos concretos para a realização de determinada tarefa.
+
+    Encontrados os problemas, definisse onde o mesmo se encontra e sua gravidade. PRATES e BARBOSA propõem a seguinte escala:
+    0 - Não é um problema. Normalmente esse é o resultado da avaliação de um especialista que foi apontado por um outro;
+    1 - Cosmético. Será concertado apenas se houver tempo extra.
+    2 - Pequeno. A correção é desejável, no entanto não deve ser uma prioridade.
+    3 - Grande. É importante que seja concertado, e deve ser priorizado.
+    4 - Catastrófico. Sua correção é de suma importância para o lançamento do projeto.
+
+
+
+
+
+
+
+
+  - No que consiste
+  - Suas etapas
+< Apresentar o dados coletados acerca do hotsite >
+< Classificar a gravidade dos problemas encontrados >
+< Propor soluções aos problemas >
+< Considerações finais (???) >
