@@ -139,12 +139,12 @@
                         $(".navegacao").find(".linkHome").show();
                         $(".navegacao").find(".nav-item").removeClass("col-4");
                         if(posScroll < lastScroll) {
-                            $(".navegacao").addClass("fixedTop");
+                            $(".navegacao").show().addClass("fixedTop");
                         } else {
-                            $(".navegacao").removeClass("fixedTop");                            
+                            $(".navegacao").hide().removeClass("fixedTop");
                         }
                     } else {
-                        $(".navegacao").removeClass("navbar navbar-expand-lg navbar-light bg-light").addClass("menuHome").removeClass("fixedTop");
+                        $(".navegacao").show().removeClass("navbar navbar-expand-lg navbar-light bg-light").addClass("menuHome").removeClass("fixedTop");
                         $(".navegacao").find(".nav-item").addClass("col-4");
                         $(".navegacao").find(".linkHome").hide();
                     }
@@ -152,20 +152,20 @@
                 });
                 
                 $(".nav-link").click(function(e) {
-                    $(this).closest(".navegacao").find(".navbar-toggler").trigger("click");
                     e.preventDefault();
+                    var navegacao = $(this).closest(".navegacao");
+                    if($(navegacao).hasClass("fixedTop")) {
+                        $(navegacao).find(".navbar-toggler").click();
+                        $(navegacao).removeClass("navbar navbar-expand-lg navbar-light bg-light fixedTop").addClass("menuHome");
+                    }
                     $(".nav-item").removeClass("active");
                     $(this).closest(".nav-item").addClass("active");
                     var target = $(this).attr("href");
-                    var navTop = parseInt($(this).closest(".navegacao").height());
-                    $("html, body").animate(
-                        { scrollTop: $(target).offset().top },
-                        500
-                    );
-                    $("html, body").animate(
-                        { scrollTop: $(target).offset().top + 1 },
-                        0
-                    );
+                    var posAtualTarget = parseInt($(target).offset().top);
+                    $("html, body").animate(  
+                        { scrollTop: posAtualTarget },
+                        (posAtualTarget) => { return (posAtualTarget * 500) / 1000 }
+                    ).scrollTop(posAtualTarget + 1);
                 });
                 
                 $(".form").submit(function(e) {
