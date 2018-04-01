@@ -53,7 +53,7 @@
             </nav>
             <figure class="containerCapa">
                 <picture>
-                    <source  srcset="imagens/livro3_2.jpg">
+                    <source srcset="imagens/livro3_2.jpg">
                     <img class="capa" alt="Imagem de capa do terceiro livro da trilogia" src="imagens/livro3_2.jpg">
                 </picture>
             </figure>
@@ -132,40 +132,58 @@
         <script>
             $(document).ready(function() {
                 var lastScroll = 0;
-                $(document).scroll(function() {
+                var scrollingBtn = false;
+                var exN = 0
+                $(document).scroll(function(e) {
                     let posScroll = $(this).scrollTop();
-                    if(posScroll > 640) {
-                        $(".navegacao").addClass("navbar navbar-expand-lg navbar-light bg-light").removeClass("menuHome");
-                        $(".navegacao").find(".linkHome").show();
-                        $(".navegacao").find(".nav-item").removeClass("col-4");
-                        if(posScroll < lastScroll) {
-                            $(".navegacao").show().addClass("fixedTop");
+                    if(!scrollingBtn || (scrollingBtn && exN === 0)) {
+                        exN++;
+                        console.log(exN + " " + !scrollingBtn + " " + (scrollingBtn && exN - 1 === 0) + " ")
+                        if(posScroll > 640) {
+                            $(".navegacao").addClass("navbar navbar-expand-lg navbar-light bg-light").removeClass("menuHome");
+                            $(".navegacao").find(".linkHome").show();
+                            $(".navegacao").find(".nav-item").removeClass("col-4");
+                            if(posScroll < lastScroll) {
+                                $(".navegacao").show().addClass("fixedTop");
+                            } else {
+                                $(".navegacao").hide();
+                            }
                         } else {
-                            $(".navegacao").hide().removeClass("fixedTop");
+                            $(".navegacao").show().removeClass("navbar navbar-expand-lg navbar-light bg-light").addClass("menuHome").removeClass("fixedTop");
+                            $(".navegacao").find(".nav-item").addClass("col-4");
+                            $(".navegacao").find(".linkHome").hide();
                         }
-                    } else {
-                        $(".navegacao").show().removeClass("navbar navbar-expand-lg navbar-light bg-light").addClass("menuHome").removeClass("fixedTop");
-                        $(".navegacao").find(".nav-item").addClass("col-4");
-                        $(".navegacao").find(".linkHome").hide();
                     }
                     lastScroll = posScroll;
                 });
-                
+
                 $(".nav-link").click(function(e) {
                     e.preventDefault();
                     var navegacao = $(this).closest(".navegacao");
+                    var height = 0;
                     if($(navegacao).hasClass("fixedTop")) {
                         $(navegacao).find(".navbar-toggler").click();
-                        $(navegacao).removeClass("navbar navbar-expand-lg navbar-light bg-light fixedTop").addClass("menuHome");
+                        $(navegacao).hide().removeClass("navbar navbar-expand-lg navbar-light bg-light fixedTop").addClass("menuHome");
                     }
+                
                     $(".nav-item").removeClass("active");
                     $(this).closest(".nav-item").addClass("active");
                     var target = $(this).attr("href");
                     var posAtualTarget = parseInt($(target).offset().top);
-                    $("html, body").animate(  
+
+                    scrollingBtn = true;
+                    exN = 0;
+                    $("html, body").animate(
                         { scrollTop: posAtualTarget },
                         (posAtualTarget) => { return (posAtualTarget * 500) / 1000 }
-                    ).scrollTop(posAtualTarget + 1);
+                    );
+                    setTimeout(
+                        function() {
+                            scrollingBtn =  false;
+                            exN = 0;
+                        },
+                        1000
+                    );
                 });
                 
                 $(".form").submit(function(e) {
